@@ -117,7 +117,7 @@ Insert or update a car.
 }
 ```
 
-## 3. Delete
+## 4. Delete
 
 METHOD: **DELETE**
 
