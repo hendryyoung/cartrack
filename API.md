@@ -6,7 +6,7 @@ API request need to include the Bearer token.
 
 ## 1. Get list of cars
 
-METHOD:
+METHOD: **GET**
 
 List all cars or search by keyword or filter by minimum price.
 
@@ -19,9 +19,9 @@ List all cars or search by keyword or filter by minimum price.
 
 `GET /list`
 
-    curl -i /list
-    curl -i /list?keyword=Bentley
-    curl -i /list?price=100000
+    curl /list -X GET
+    curl /list?keyword=Bentley -X GET
+    curl /list?price=100000 -X GET
 
 ### Response
 
@@ -54,6 +54,8 @@ List all cars or search by keyword or filter by minimum price.
 
 ## 2. Get a car
 
+METHOD: **GET**
+
 Get the details of a car.
 
 | Query Parameters | Description |
@@ -62,9 +64,9 @@ Get the details of a car.
 
 ### Request
 
-`GET /get`
+`GET /get/:car_id`
 
-    curl -i -H 'Accept: application/json' /get/3
+    curl /get/3  -X GET
 
 ### Response
 
@@ -78,5 +80,64 @@ Get the details of a car.
         "model": "Continental GT",
         "price": "325888.00"
     }
+}
+```
+
+## 3. Upsert
+
+METHOD: **POST**
+
+Insert or update a car.
+
+| Query Parameters | Description |
+| ------------- | ------------- |
+| id  | car id |
+| brand  | brand name |
+| model  | model name |
+| price  | price |
+
+### Request
+
+`POST /upsert`
+
+    curl /upsert -X POST -d 'id=3&brand=Bentley&model=Continental%20GT&price=325888'
+
+### Response
+
+```
+{
+    "code": 0,
+    "message": [],
+    "car": {
+        "id": 3,
+        "brand": "Bentley",
+        "model": "Continental GT",
+        "price": "325888"
+    }
+}
+```
+
+## 3. Delete
+
+METHOD: **DELETE**
+
+Delete a car.
+
+| Query Parameters | Description |
+| ------------- | ------------- |
+| id  | car id |
+
+### Request
+
+`DELETE /delete/:car_id`
+
+    curl /delete/3 -X POST
+
+### Response
+
+```
+{
+    "code": 0,
+    "message": []
 }
 ```
