@@ -19,3 +19,4 @@ To be able to connect to your specific PostgreSQL databaase, please change the c
 ## 2. API Usage
 
 * Bearer token is need from md5 of **hendry_cartrack**
+* List of API details can be found in the [API readme](https://github.com/hendryyoung/cartrack/blob/master/API.md)
