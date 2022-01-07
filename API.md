@@ -11,6 +11,11 @@ List all cars or search by keyword or filter by minimum price.
   price: search by minimum price
 ---
 
+| Query Parameters | Description |
+| ------------- | ------------- |
+| keyword  | **Optional**.  search by brand or model |
+| price  | **Optional**.  search by minimum price  |
+
 ### Request
 
 `GET /list`
