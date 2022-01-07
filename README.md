@@ -1,4 +1,4 @@
-## Schema and table need to be created.
+## 1. Schema and table need to be created.
 
 --
     CREATE SCHEMA IF NOT EXISTS hendry_cartrack;
