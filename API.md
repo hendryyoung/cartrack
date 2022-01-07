@@ -6,8 +6,8 @@ List all cars or search by keyword or filter by minimum price.
 
 | Query Parameters | Description |
 | ------------- | ------------- |
-| keyword  | **Optional**.\search by brand or model |
-| price  | **Optional**.\search by minimum price  |
+| keyword  | **Optional**.<br/>search by brand or model |
+| price  | **Optional**.<br/>search by minimum price  |
 
 ### Request
 
